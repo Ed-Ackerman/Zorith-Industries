@@ -7,7 +7,6 @@ Welcome to the Zorith Industries Web project! This repository contains the sourc
 ## Features
 
 - Responsive design for various devices.
-- [Add more features...]
 
 ## Directory Structure
 
