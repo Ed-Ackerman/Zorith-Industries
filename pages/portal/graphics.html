@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Zorith Industries is a leading multi-national tech corporation specializing in software development, Internet of Things (IoT) solutions, and artificial intelligence (AI) technologies. With a strong presence in Africa and beyond.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#FFF">
+    <link rel="shortcut icon" href="/assets/logo/favicon2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/portal.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/order.css">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-2" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/portal.js"></script>
+    <script src="/assets/js/web.js"></script>
+    <title>ZORITH INDUSTRIES | Product Design Portal</title>
+</head>
+<body>
+
+       <!-- loader -->
+    <section class="loader">
+        <div class="ring-frame"></div>
+        <div class="disc-frame"></div>
+        <section class="loading"></section>
+    </section>
+
+    <!-- nav -->
+    <div class="topnav">
+        <a href="/index.html" class="logo"></a>
+        <div class="nav-toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+        <nav class="main-nav">
+            <a href="/index.html">Home</a>
+            <a href="/pages/about.html">About Us</a>
+            <div class="dropdown">
+                <a href="/pages/services.html" class="dropdown-link">Services <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <div class="sector"><a href="/pages/services.html">All Services</a></div>
+                   <div class="services_sec">
+                        <div class="sector">Services</div>
+                        <div class="services_anchors">
+                            <a href="/pages/add_ons/services/iot.html">IoT</a>
+                            <a href="/pages/add_ons/services/web.html">Website</a>
+                            <a href="/pages/add_ons/services/system.html">Systems</a>
+                            <a href="/pages/add_ons/services/app.html">Mobile Apps</a>
+                            <a href="/pages/add_ons/services/graphic.html">Product Design</a>
+                            <a href="/pages/add_ons/services/graphic.html">Graphics</a>
+                        </div>
+                   </div>
+                   <div class="services_sec">
+                        <div class="sector">Industries</div>
+                        <div class="services_anchors">
+                            <a href="/pages/add_ons/industries/health.html">Health</a>
+                            <a href="/pages/add_ons/industries/agriculture.html">Agriculture</a>
+                            <a href="/pages/add_ons/industries/business.html">Business Enterprises</a>
+                            <a href="/pages/add_ons/industries/fintech.html">Fintech</a>
+                            <a href="/pages/add_ons/industries/education.html">Education</a>
+                            <a href="/pages/add_ons/industries/entertainment.html">Entertainment</a>
+                        </div>
+                   </div>
+                </div>
+            </div>
+            <button class="portal-anchor" onclick="window.location.href='/pages/portal.html'">Portal</button>
+        </nav>
+    </div>
+
+    <!-- form -->
+    <form id="multi-step-form" action="../../assets/php/portal.php" method="post" enctype="multipart/form-data">
+      
+        <h3>Grapics & UI Design</h3>
+
+        <div class="container">
+            <div class="progress-container">
+                <div class="progress" id="progress"></div>
+                <div class="circle active">
+                    <span class="step active">1</span>
+                    <span class="step-name">Contact Information</span>
+                </div>
+                <div class="circle">
+                    <span class="step">2</span>
+                    <span class="step-name">Project Requirements</span>
+                </div>
+                <div class="circle">
+                    <span class="step">3</span>
+                    <span class="step-name">Time & Budget</span>
+                </div>
+                <div class="circle">
+                    <span class="step">4</span>
+                    <span class="step-name">Terms & Conditions</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Info Section -->
+        <div class="stage active" id="contact" data-step="1">
+            <div class="heading">Contact Information</div>
+            <div class="info">
+                <label for="name">Full Name</label>
+                <p>Enter your full name, e.g., John Doe.</p>
+                <input type="text" id="name" name="name" placeholder="Full Name">
+            </div>
+            <div class="info">
+                <label for="phone">Phone (WhatsApp)</label>
+                <p>Provide your WhatsApp number, e.g., +1 123-456-7890.</p>
+                <input type="text" id="phone" name="phone" placeholder="WhatsApp Number">
+            </div>
+            <div class="info">
+                <label for="email">Email</label>
+                <p>Enter your email address, e.g., example@gemail.com.</p>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="info">
+                <label for="company">Company (optional)</label>
+                <p>Add your company name (optional), e.g., ABC Inc..</p>
+                <input type="text" id="company" name="company" placeholder="Company Name">
+            </div>
+            <div class="info">
+                <label for="communication">Preferred Communication</label>
+                <p>Select your preferred method of communication for updates and feedback.</p>
+                <select name="communication" id="communication">
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Phone Call">Phone Call</option>
+                    <option value="Email">Email</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button class="next-button" id="next">Next &gt;</button>
+            </div>
+        </div>
+        
+       <!-- Graphics and UI Design Section -->
+        <div class="stage" id="requirements" data-step="2">
+            <div class="heading">Graphics and UI Design</div>
+            <div class="info">
+                <label for="project-title">Project Title</label>
+                <p>Add a brief title or name for your graphics and UI design project.</p>
+                <input type="text" id="project-title" name="project-title" placeholder="Project Title">
+            </div>
+            <div class="info">
+                <label for="project-purpose">Design Purpose</label>
+                <p>Describe the main goal or purpose of your graphics and UI design project.</p>
+                <textarea id="project-purpose" name="project-purpose" placeholder="Design Purpose"></textarea>
+            </div>
+            <div class="info">
+                <label for="project-elements">Design Elements</label>
+                <p>List the main design elements or components you envision for your project.</p>
+                <textarea id="project-elements" name="project-features" placeholder="Design Elements"></textarea>
+            </div>
+            <div class="info">
+                <label for="project-type">Design Type</label>
+                <p>Are you in need of a logo, banner, poseter, UI design, ....</p>
+                <textarea id="project-type" name="project-type" placeholder="Design Type"></textarea>
+            </div>
+            <div class="info">
+                <label for="project-style">Design Style</label>
+                <p>Specify your preferred design style.</p>
+                <input type="text" id="project-style" name="design-scheme" placeholder="Design Color">
+                <input type="text" id="project-style" name="design-scheme-typography" placeholder="Design Typography">
+            </div>
+            <div class="info">
+                <label for="project-platform">Design Form</label>
+                <p>Specify your preferred design style, e.g., minimalistic, modern, vintage..</p>
+                <input type="text" id="project-platform" name="project-pages" placeholder="Design Platform">
+            </div>
+            <div class="info">
+                <label for="upload-files">Upload Files</label>
+                <p>If you have any specific files, images, or references related to your graphics and UI design project, please upload or provide details.</p>
+                <input type="file" name="upload-files" id="upload-files">
+            </div>
+            <div class="info">
+                <label for="reference-designs">Reference Designs</label>
+                <p>Are there any existing design examples or references that you would like to use for inspiration in your graphics and UI design project?</p>
+                <textarea id="reference-designs" name="reference-project" placeholder="Reference Designs"></textarea>
+            </div>
+            <div class="buttons">
+                <button class="prev-button" id="prev" disabled>&lt; Previous</button>
+                <button class="next-button" id="next">Next &gt;</button>
+            </div>
+        </div>
+
+        
+        <!-- Timeline & Budget Section -->
+        <div class="stage" id="timeline" data-step="3">
+            <div class="heading">Timeline & Budget</div>
+            <div class="info">
+                <label for="completion-date">Completion Date</label>
+                <p>Select the desired completion date for your project.</p>
+                <input type="date" name="completion-date" id="completion-date">
+            </div>
+            <div class="info">
+                <label for="budget">Budget</label>
+                <p>Specify your project budget excluding the domain name and hosting services costs.</p>
+                <input id="budget" class="budget" name="budget" placeholder="Budget">
+            </div>
+            <div class="info" style="display: none;">
+                <label for="domain-hosting">Domain & Hosting</label>
+                <p>Indicate if you need a domain name and hosting services (UGX: 300K annually).</p>
+                <select name="domain-hosting" id="site-type">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="info">
+                <label for="payment-schedule">Payment Schedule</label>
+                <p>Select your preferred payment schedule, e.g., Upfront or Milestones.</p>
+                <select name="payment-schedule" id="payment-schedule">
+                    <option value="Upfront">Upfront</option>
+                    <option value="Milestones">Milestones</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button class="prev-button" id="prev" disabled>&lt; Previous</button>
+                <button class="next-button" id="next">Next &gt;</button>
+            </div>
+        </div>
+
+      
+        <!-- Submission Section -->
+        <div class="stage" id="submit" data-step="4">
+            <!-- <div id="error-message" class="error-message"></div> -->
+
+            <div class="terms">
+                <div class="heading">Policy Terms & Conditions of Development</div>
+                <p>These terms and conditions govern the development of your project with Zorith Industries. By proceeding with the project, you agree to the following:.</p>
+            
+                <ol>
+                    <li><strong>Payment Schedule:</strong> You agree to the payment schedule as outlined in the project proposal. Payments can be made upfront or in accordance with milestones specified in the proposal.</li>
+            
+                    <li><strong>Project Scope:</strong> The project scope, including inclusions and exclusions, is defined in the project proposal or contract. Any changes to the scope may result in additional costs.</li>
+            
+                    <li><strong>Change Requests:</strong> If you wish to make changes to the project scope, you must submit a change request. Developer will provide a cost estimate and timeline for such changes, which must be approved in writing before implementation.</li>
+            
+                    <li><strong>Project Timeline:</strong> A project timeline will be provided, outlining key phases from design to deployment. Delays caused by factors beyond Developer's control may affect this timeline.</li>
+            
+                    <li><strong>Intellectual Property:</strong> Upon full payment, you own the intellectual property rights to the completed project, excluding any third-party software or resources used.</li>
+            
+                    <li><strong>Confidentiality:</strong> Both parties agree to keep all project-related information confidential and not disclose it to third parties without written consent.</li>
+            
+                    <li><strong>Communication:</strong> Effective communication is essential. We will use email, phone calls, or meetings as needed to discuss project progress and updates.</li>
+            
+                    <li><strong>Testing and Quality Assurance:</strong> Developer will perform testing and quality assurance to ensure the project functions as intended. You agree to participate in testing and promptly report any issues.</li>
+            
+                    <li><strong>Deployment:</strong> Developer will deploy the project, and this may involve temporary downtime or adjustments to your services. Developer will strive to minimize disruptions.</li>
+            
+                    <li><strong>Maintenance and Support:</strong> We offer post-launch support for bug fixes and minor updates as defined in the project proposal. Additional support or feature requests may incur extra charges.</li>
+            
+                    <li><strong>Hosting:</strong> Hosting costs are separate from the project cost. The annual hosting fee is 300,000 UGX. Hosting terms and conditions will be provided separately if applicable.</li>
+            
+                    <li><strong>Cancellation and Refunds:</strong> If you decide to cancel the project, any paid fees are non-refundable. In exceptional cases, refunds may be considered at Developer's discretion.</li>
+                        
+                    <li><strong>Force Majeure:</strong> Neither party will be liable for failure to perform their obligations due to events beyond their control, such as natural disasters or government actions.</li>
+            
+                    <li><strong>Client Responsibilities:</strong> You are responsible for providing necessary materials, content, and feedback in a timely manner to avoid project delays.</li>
+            
+                    <li><strong>Termination:</strong> Either party may terminate the contract in writing if the other party breaches its obligations. Termination terms are outlined in the contract.</li>
+            
+                    <li><strong>Acceptance:</strong> You agree to review and accept the final project deliverables within  One(1) week after delivery.</li>
+            
+                    <li><strong>Additional Costs:</strong> Any additional costs not included in the project proposal will be discussed and agreed upon before implementation.</li>
+            
+                    <li><strong>Warranty:</strong> Developer warrants that the project will function as described in the project proposal for One(1) month. This warranty does not cover issues caused by third-party actions or changes made by you.</li>
+            
+                    <li><strong>Dispute Resolution:</strong> In case of disputes, both parties agree to attempt resolution through negotiation or mediation before pursuing legal action.</li>
+                </ol>
+            </div>
+            <div class="info" style="margin-top: 30px;">
+                <label for="requests">Requests</label>
+                <p>If you happen to have any other requests, please put them forward.</p>
+                <textarea placeholder="Your Requests" name="requests"></textarea>
+            </div>
+            <div class="buttons">
+                <button class="prev-button" id="prev" disabled>&lt; Previous</button>
+                <button type="submit" id="next"> Send </button>
+            </div>
+        </div>
+    </form>
+    
+    <?php include ('../../assets/php/portal.php'); ?>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_sec">
+            <div class="footer_logo"></div>
+            <div class="footer_text">
+                Zorith Industries Illuminating the Path to Tomorrow's Tech Frontier. Seamlessly fusing the realms of Software, IoT, and AI, we embark on a journey to reshape the future, one innovation at a time. Explore the boundless potential of our creations, where intelligent systems converge, devices communicate effortlessly, and software transcends limitations.
+            </div>
+        </div>
+        <div class="footer_sec">
+            <h1>Links</h1>
+            <a href="/index.html">Home</a>
+            <a href="/pages/about.html">About Us</a>
+            <a href="/pages/services.html">Services</a>
+            <button class="portal-anchor" onclick="window.location.href='/pages/portal.html'">Portal</button>
+        </div>
+        <div class="footer_sec">
+            <h1>Contact</h1>
+            <p><i class="fas fa-envelope"></i> Email: info@zorithindustries.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Location: Kampala, Uganda</p>
+            <p><i class="fas fa-phone"></i> Tel: +256-788276076</p>
+            <p><small>All Rights Reserved &copy; Zorith Industries</small></p>
+        </div>
+        
+    </footer>
+</body>
+</html>

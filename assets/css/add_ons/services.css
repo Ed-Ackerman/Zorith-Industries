@@ -1,0 +1,375 @@
+/* *{
+    border: 1px solid red;
+} */
+
+/* description */
+.description, .features, .benefits, .procedures, .advantages{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 90px auto;
+}
+
+.explanation {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.explanation p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.explanation p:first-of-type {
+    margin-top: 10px;
+}
+
+
+.explanation p:not(:first-child)::before {
+    content: "o";
+    position: absolute;
+    left: 50px;
+    color: #0f0e137e; 
+}
+
+/* features */
+.feature {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #0f0e13;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-desc {
+    width: 93%;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: row;
+}
+
+.feature-desc strong {
+    font-weight: bold;
+    color: #0f0e13;
+    display: block;
+    margin-bottom: 5px;
+    width: 30%;
+    font-size: 1.5rem;
+}
+
+.feature-desc::before {
+    content: "\2022"; 
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    color: #0f0e137e; 
+}
+
+.features i{
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+/* benefits */
+.benefits {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.intro-benefits, .procedure-intro, .visual-intro, .advantage-intro{
+    margin: 30px auto;
+    font-size: 18px;
+    width: 90%;
+    text-align: left;
+}
+
+.benefit {
+    width: 90%;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.benefit-desc {
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    position: relative; 
+    padding-bottom: 10px;
+}
+
+
+h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%; 
+    height: 3px;
+    background: linear-gradient(to right, #0f0e13, transparent);
+}
+
+.benefit-desc p {
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.benefit-desc:hover {
+    background-color: #fff; /* Highlight background on hover */
+    transition: background-color 0.3s ease;
+}
+
+
+/* procedures */
+
+.procedure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.procedure-desc {
+    width: 50%;
+    padding: 20px;
+    border-left: 2px solid #0f0e137e;
+    position: relative;
+}
+
+.procedure-desc h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.procedure-desc p {
+    font-size: 14px;
+    color: #555;
+}
+
+.procedure-desc:before {
+    content: attr(data-step);
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 36px;
+    height: 36px;
+    background: #0f0e13;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* visuals */
+.visual-carousel {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.visual-carousel::before, .visual-carousel::after {
+    background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+}
+
+.visual-carousel::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+
+.visual-carousel::before {
+    left: 0;
+    top: 0;
+}
+
+
+.visual-carousel .visual-track {
+    width: 500px; /* Make the track twice as wide */
+    animation: scroll 40s linear infinite;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: calc(500px * 6); /* Adjust width for double content */
+}
+
+.visual-carousel .visual-track:hover {
+    animation-play-state: paused;
+}
+
+.visual-carousel .visual-img {
+    height: 50vh;
+    width: 500px;
+    margin: 20px;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 1000px 0 inset rgba(0, 0, 0, 0.2);
+}
+
+
+.visual-img:nth-child(1) {
+    background-color: transparent;
+}
+
+.visual-img:nth-child(2) {
+    background-color: transparent;
+}
+
+.visual-img:nth-child(3) {
+    background-color: transparent;
+}
+
+.visual-img:nth-child(4){
+    background-color: transparent;
+}
+
+.visual-img:nth-child(5) {
+    background-color: transparent;
+}
+
+.visual-img:nth-child(6){
+    background-color: transparent;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-500px * 4)); /* Change this to half the width of the track */
+    }
+}
+
+
+#vis_img1{
+    background-image: url('/assets/images/vis1.jpg');
+}
+#vis_img2{
+    background-image: url('/assets/images/vis2.png');
+}
+#vis_img3{
+    background-image: url('/assets/images/vis3.png');
+}
+#vis_img4{
+    background-image: url('/assets/images/vis4.png');
+}
+#vis_img5{
+    background-image: url('/assets/images/vis5.jpg');
+}
+#vis_img6{
+    background-image: url('/assets/images/vis6.jpeg');
+}
+
+/* advantage */
+
+
+.advantage {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.advantage-desc {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+.advantage-desc:hover {
+    background-color: #e0e0e0;
+}
+
+.advantage-desc h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.advantage-desc p {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .explanation p:not(:first-child)::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+    }
+
+    .feature-desc{
+        width: 94%;
+        flex-direction: column;
+    }
+
+    .feature strong{
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .features i{
+        width: 90%;
+        font-size: 1rem;
+        text-align: center;
+    }
+ 
+    .procedure-desc{
+        width: 85%;
+        margin: auto;
+    }
+    
+    .visual-carousel::before, .visual-carousel::after {
+        background: transparent;
+    }
+
+    .advantage-desc {
+        padding: 25px;
+    }
+    .visual-carousel .visual-track {
+        width: 100%;
+        width: calc(300px * 6);
+    }
+}

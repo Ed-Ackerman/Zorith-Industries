@@ -1,0 +1,247 @@
+/* 
+    color #212830
+*/
+
+/* intro */
+.intro_img{
+    background-image: url('/assets/images/index.svg');
+}
+
+/* services */
+.services{
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.services_intro{
+    width: 100%;
+    text-align: left;
+    margin: 30px auto;
+}
+
+.service_intro{
+    width: 90%;
+    text-align: left;
+    margin: 30px auto;
+}
+
+.service_profile{
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 10px 0px #0f0e1323;
+}
+
+.reversal{
+    flex-direction: row-reverse;
+}
+
+.service_profile:hover{
+    box-shadow: 0px 0px 10px 0px #1b1b2238;
+}
+
+.service_img{
+    width: 40%;
+    height: 100%;
+    min-height: 60vh;
+    border-radius: 20px;
+}
+
+.service_about{
+    width: 70%;
+    margin: 20px;
+}
+
+.service_about h1{
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.service_about a{
+    display: inline-flex;
+    color: #0f0e13;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px auto;
+    text-decoration: none;
+}
+
+.service_about a:hover{
+    scale: 1.1;
+}
+
+@media (max-width: 768px) {
+    .services{
+        margin-top: 0;
+    }
+    h1{
+        font-size: 2rem;
+        margin: 50px auto;
+    }
+    .service_profile{
+        width: 95%;
+        flex-direction: column;
+        margin: 20px auto;
+    }
+    .service_img{
+        width: 100%;
+    }
+
+    .services_intro{
+        width: 100%;
+    }
+    .service_intro{
+        width: 90%;
+    }
+    
+    .service_about{
+        width: 90%;
+    }
+}
+
+.main_logo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+.zi_logo{
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    background-image: url('/assets/logo/logo3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quote_container {
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px #0f0e137e;
+}
+
+.quote_mark {
+    font-size: 2rem;
+    color: #0f0e13;
+    margin-right: 20px;
+}
+
+.quote_content {
+    font-style: italic;
+    color: #0f0e13;
+    flex: 1;
+}
+
+.quote_author {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+    color: #0f0e13;
+}
+.highlight {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .main_logo{
+        flex-direction: column;
+    }
+    .zi_logo{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+    .quote_container{
+        margin: 0 10px 50px 10px;
+    }
+}
+
+/* Value */
+.values {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 90px auto;
+}
+
+.value_additions {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; 
+}
+
+.value_profile {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px #0f0e1323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+}
+
+.value_profile::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: calc(100% - 40px);
+    background-color: #0f0e13;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.value_profile h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.value_text {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .value_additions {
+        flex-direction: column;
+    }
+}
+
